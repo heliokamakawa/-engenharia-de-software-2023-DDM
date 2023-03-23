@@ -5,33 +5,24 @@ class PrimeiraPagina extends StatelessWidget{
   /*
   Alinhamento e tamanho
   Para alinhar algo,sempre é necessário ter uma referência! Por que?
-   - não faz sentido alinhar ou mudar de tamamho  de um filho
-   → quando o pai tem o mesmo tamanho do filho! Por que?
+  Quando o Pai ("recipiente") tiver o mesmo tamanho do filho:
+   - não faz sentido tentar posicionar o filho? Por que?
 
-  Todas as exibições dentro de um layout devem ter 
-  largura, altura, posição x e posição y. 
-  (Isso se aplica a Android, IOS, Flutter, etc)
-  → Assim, largura e a altura não funciona em 
-  widget (exemplo: container) interno
-  se o externo não tiver o alinhamento - senão ele não consegue obter a posição
-
-  widgets pais sempre têm a última palavra sobre como seus 
-  descendentes devem ser dimensionados.
+  Todas as exibições dentro de um layout devem ter posição (x,p) e tamanho (largura, altura).
+  → Assim, largura e a altura não funciona em   widget (exemplo: container) interno se o 
+  externo não tiver o alinhamento - não consegue obter a posição para desenhar...
 
   Container 
-  - alinhamento (refere-se ao filho)
-    → uma vez definido, ocupa todo o espaço (de modo que os filhos tenham referência)
-  - largura width (refere-se ao alinhamento do filho)
-  - altura height (refere-se ao alinhamento do filho)
   >>>>Container irá dimensionar-se com base no tamanho de seu filho.
-  → Quando não sabe ele ocupa todo o espaço existente
+  → Quando não tem direcionamento, ocupa todo o espaço existente
+  Propriedades: alignment, width, height  
   */
 
   @override
   Widget build(BuildContext context){
     /*
     pai - azul (blue)
-    filho - cinza (green)
+    filho - cinza (gray)
     neto - vermelho (red)
     */
     return layout01();
@@ -85,3 +76,8 @@ class PrimeiraPagina extends StatelessWidget{
     */
   }
 }
+
+/*
+definir Scaffold c(appBar,body, floatingActionButton,bottomNavigationBar)
+prototipar telas do projeto
+*/
