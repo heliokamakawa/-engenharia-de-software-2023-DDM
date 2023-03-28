@@ -1,4 +1,9 @@
 Conteúdo?
+- fundamentos para o posicionamento de elementos gráficos;
+- rotas; 
+- principais elementos gráficos;
+- prototipação;
+- complemente...
 
 Objetivos da aula?
 
