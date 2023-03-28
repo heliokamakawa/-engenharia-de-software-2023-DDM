@@ -6,6 +6,7 @@ Conteúdo?
 - fundamentos para criar um elemento gráfico geral; 
 - o que é necessário para criar um widget; 
 - skills necessárias para criar qualquer elemento gráfico; 
+- Scaffold, Material, Cupertino, Widget;
 - complemente...
 
 Objetivos da aula?
