@@ -96,7 +96,10 @@ Para trabalhar com rotas em Flutter, são necessários:
     → DASAFIO
       - Em relação as rotas nomeadas, pense em uma maneira de facilitar o uso e a manutenção.
 
-1)Implemente a navegação de pelo menos 10 widgets do SEU projeto. Lembre-se que o projeto deve ser único, relevante e coerente - deve estar validada pelo professor!
+1)Implemente a navegação de pelo menos 10 widgets do SEU projeto. 
+ - Lembre-se que o projeto deve ser único, relevante e coerente - deve estar validada pelo professor!
+ - De prioridade na lógica de navegação e no sentido dos widgets - por enquanto não precisa "desenhar" completamente;
+ - Se der tempo, vai tentando implementar e caso não consiga, faça a prototipação por meio de outro recurso (pode ser no caderno).
 2)Em flutter, o que é rotas (Route)? Para que serve?
 3)Para definir uma rota (Route) é necessário utilizar qual classe? O construtor requer parâmetro (se sim, indique o tipo e objetivo)?
 4)Em flutter, o que é necessário para implementar uma "navegação"?
