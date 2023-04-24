@@ -3,7 +3,7 @@ classes - sintaxe base e palavras chaves;
 atributos privados e públicos;
 métodos privados e púlicos;
 construtores;
-construtores com parâmetros posicionais e posicionais;
+construtores com parâmetros posicionais e nomeados;
 Inicializando parâmetros formais;
 Herança;
 classes com associação;
