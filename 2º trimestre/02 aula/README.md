@@ -1,17 +1,29 @@
-Tema: Desenvolvendo todo Layout
+Objetivo app:
+- interface database; 
+- widget lista;
+- ligação widget alterar e excluir; 
+
 Material de estudo:
+- formulário reativo 
+    → https://pub.dev/packages/reactive_forms
+    → https://morioh.com/p/66a3491516d1
 - Lista → https://api.flutter.dev/flutter/widgets/ListView-class.html
 - Item da Lista → https://api.flutter.dev/flutter/material/ListTile-class.html?gclid=Cj0KCQjwpPKiBhDvARIsACn-gzCOmlEkpiegHYJQAgCKlV-kmPDlbpzxYDF7bgm0Bkn-tm8jdN3re5EaAhX5EALw_wcB&gclsrc=aw.ds
 - Classes abstratas e interfaces → https://flutterbyexample.com/lesson/abstract-classes-and-interfaces
-- 
-
+- onTap e ListTile
+    → https://www.youtube.com/watch?v=sZBJun7oU-o
+- programação assíncrona; await, async, Future, delayed, Duration (onde e quando utilizar).
+    → vídeo aula - https://www.youtube.com/watch?v=Qa7zno-2SFw
+- DAO → https://www.youtube.com/watch?v=mCoqJPal7Zk
 
 >>>>>Roteiro de Aula
-- baixar o projeto e executar no EMULADOR → https://github.com/heliokamakawa/-engenharia-de-software-2023-DDM/tree/main/2%C2%BA%20trimestre/02%20aula/projeto%20da%20aula/projeto%20inicial/lib
-- aula função assíncrona; await, async, Future, delayed, Duration (onde e quando utilizar).
+- baixar o projeto e executar no EMULADOR 
+    → https://github.com/heliokamakawa/-engenharia-de-software-2023-DDM/tree/main/2%C2%BA%20trimestre/02%20aula/projeto%20da%20aula/projeto%20inicial/lib
+- aula função assíncrona
 - criar DTO
 - criar interface DAO; 
 - criar DAO Fake;
+- entenda a importância da Inversão de Dependência
 - Widget lista - FutureBuilder future/builder/AsyncSnapshot - trazer dados;
     - se não tiver dados; 
     - se for nulo;
