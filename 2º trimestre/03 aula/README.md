@@ -41,13 +41,11 @@ if(parametro != null){
 ```
 - chamada do método alterar do DAO;
 
-@@@@ Atividade I 
-- implemente o widget detalhes;
-- altere o dao para que o método salvar, salve e altere
-
-
 @@@@ Diário de Aula
-- Implemente pelo menos 3 formulários, 3 listas e 3 detalhes do seu projeto.
+- Atividade I - implemente o widget detalhes;
+- Atividade II - Implemente pelo menos 3 listas do seu projeto.
+- Atividade III - Implemente pelo menos 3 formulários do seu projeto.
+- Atividade IV - Implemente pelo menos 3 detalhes do seu projeto.
 
 @@@@ Projeto
 - Faça a impelementação do conteúdo corrente no seu projeto.
