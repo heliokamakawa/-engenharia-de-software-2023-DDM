@@ -1,7 +1,11 @@
 Objetivo app:
-- interface database; 
-- widget lista;
-- ligação widget alterar e excluir; 
+- interface dao - como isolar a dependência do BD (inversão de dependência); 
+- definindo lista (widget ListView)
+    → interando dados no widget;
+- widget item da lista (widget ListTile)
+    → definindo painel de botões (excluir e alterar);
+    → excluir → chamada do método excluir do dao;
+    → alterar → chamada do formulário.
 
 Material de estudo:
 - formulário reativo 
