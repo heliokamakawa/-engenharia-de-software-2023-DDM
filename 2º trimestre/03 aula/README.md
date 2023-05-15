@@ -19,30 +19,22 @@ programação assíncrona; await, async, Future, delayed, Duration (onde e quand
 DAO → https://www.youtube.com/watch?v=mCoqJPal7Zk
 Roteiro de Aula
 
-baixar o projeto e executar no EMULADOR → https://github.com/heliokamakawa/-engenharia-de-software-2023-DDM/tree/main/2%C2%BA%20trimestre/02%20aula/projeto%20da%20aula/projeto%20inicial/lib
-aula função assíncrona
-criar DTO
-criar interface DAO;
-criar DAO Fake;
-entenda a importância da Inversão de Dependência
-Widget lista - FutureBuilder future/builder/AsyncSnapshot - trazer dados;
-se não tiver dados;
-se for nulo;
-definir lista de contatos;
-lista - ListView.builder itemCount/itemBuilder
-definir item com Text
-criar um método criarItemLista
-definir ListTile leading/CircleAvatar/backgroundImage, title, subtitle
+baixar o projeto e executar no EMULADOR → https://github.com/heliokamakawa/-engenharia-de-software-2023-DDM/tree/main/2%C2%BA%20trimestre/03%20aula/projeto%20aula/projeto%20inicial
+- Já escolha um computador em que o emulador e o projeto estaja executando!!!
+- reveja o código do projeto e relembre a lógica;
+- rever o DAO - alterações com interação de dados; 
+
+- definindo a lista reativa (statefull);
+- definindo o formulário reativo (statefull);
+
+- definindo passagem de parâmetro (arguments) em rota nomeada;
+- recebendo o parâmetro ModalRoute.of(context);
+- associando o parâmetro recebindo nos campos; 
+- chamada do método alterar do DAO;
+
+@@@@ Atividade I - implemente o widget detalhes;
+
+
 @@@@ Diário de Aula
+Implemente pelo menos 4 formulários do seu projeto.
 
-Atividade I - implemente 2 listas no seu projeto;
-Roteiro de Aula
-
-definir alterar e excluir
-detalhes onTap
-@@@@ Diário de Aula
-
-Atividade II - implemente alterar, excluir e detalhes no seu projeto;
-@@@@ Desenvolvimento do Projeto
-
-Elabore a lista, cadastro, alterar e detalhes do seu projeto (pelo menos 5 formulários).
