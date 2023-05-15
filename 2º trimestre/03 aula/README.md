@@ -43,6 +43,7 @@ if(parametro != null){
 
 @@@@ Atividade I 
 - implemente o widget detalhes;
+- altere o dao para que o método salvar, salve e altere
 
 
 @@@@ Diário de Aula
