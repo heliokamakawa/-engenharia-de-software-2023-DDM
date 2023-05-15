@@ -21,11 +21,13 @@ Material de estudo:
 
 - definindo passagem de parâmetro (arguments) em rota nomeada;
 - recebendo o parâmetro ModalRoute.of(context);
+```dart
 var parametro = ModalRoute.of(context)!.settings.arguments;
     if(parametro != null){
       var contato = parametro as Contato;
       preencherCampos(contato);
     } 
+```
 - associando o parâmetro recebindo nos campos; 
 - chamada do método alterar do DAO;
 
