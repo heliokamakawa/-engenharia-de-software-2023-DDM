@@ -36,5 +36,8 @@ baixar o projeto e executar no EMULADOR → https://github.com/heliokamakawa/-en
 
 
 @@@@ Diário de Aula
-Implemente pelo menos 4 formulários do seu projeto.
+- Implemente pelo menos 3 formulários, 3 listas e 3 detalhes do seu projeto.
+
+@@@@ Projeto
+- Faça a impelemntação do conteúdo corrente no seu projeto.
 
