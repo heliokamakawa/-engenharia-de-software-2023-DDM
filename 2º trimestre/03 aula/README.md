@@ -1,8 +1,8 @@
 Objetivo app:
-passagem de parâmetros entre widgets
+→ passagem de parâmetros entre widgets
  - definindo a lógica de alterar;
  - definindo a lógica de detalhes;
-lista reativa - alterações dinâmicas;
+→ lista reativa - alterações dinâmicas;
 
 Material de estudo:
 → Passagem de argumento pela rota nomeada: https://docs.flutter.dev/cookbook/navigation/navigate-with-arguments
