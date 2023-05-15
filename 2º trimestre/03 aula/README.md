@@ -50,5 +50,5 @@ if(parametro != null){
 - Implemente pelo menos 3 formulários, 3 listas e 3 detalhes do seu projeto.
 
 @@@@ Projeto
-- Faça a impelemntação do conteúdo corrente no seu projeto.
+- Faça a impelementação do conteúdo corrente no seu projeto.
 
