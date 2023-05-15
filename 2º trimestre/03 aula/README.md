@@ -23,12 +23,22 @@ Material de estudo:
 - recebendo o parâmetro ModalRoute.of(context);
 ```dart
 var parametro = ModalRoute.of(context)!.settings.arguments;
-    if(parametro != null){
-      var contato = parametro as Contato;
-      preencherCampos(contato);
-    } 
+```
+- Verificando se é nulo ;
+```dart
+var parametro = ModalRoute.of(context)!.settings.arguments;
+if(parametro != null){
+ var contato = parametro as Contato;
+} 
 ```
 - associando o parâmetro recebindo nos campos; 
+```dart
+var parametro = ModalRoute.of(context)!.settings.arguments;
+if(parametro != null){
+ var contato = parametro as Contato;
+ preencherCampos(contato);
+} 
+```
 - chamada do método alterar do DAO;
 
 @@@@ Atividade I 
