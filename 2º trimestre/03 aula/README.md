@@ -5,8 +5,8 @@ Objetivo app:
 - lista reativa - alterações dinâmicas;
 
 Material de estudo:
-→ Passagem de argumento pela rota nomeada: https://docs.flutter.dev/cookbook/navigation/navigate-with-arguments
-→ StatelessWidget e StatefullWidget
+- Passagem de argumento pela rota nomeada: https://docs.flutter.dev/cookbook/navigation/navigate-with-arguments
+- StatelessWidget e StatefullWidget
  - https://www.youtube.com/watch?v=F5BH0neglbc
  - 
 
