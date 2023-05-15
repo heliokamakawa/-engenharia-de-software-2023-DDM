@@ -29,10 +29,16 @@ baixar o projeto e executar no EMULADOR → https://github.com/heliokamakawa/-en
 
 - definindo passagem de parâmetro (arguments) em rota nomeada;
 - recebendo o parâmetro ModalRoute.of(context);
+var parametro = ModalRoute.of(context)!.settings.arguments;
+    if(parametro != null){
+      var contato = parametro as Contato;
+      preencherCampos(contato);
+    } 
 - associando o parâmetro recebindo nos campos; 
 - chamada do método alterar do DAO;
 
-@@@@ Atividade I - implemente o widget detalhes;
+@@@@ Atividade I 
+- implemente o widget detalhes;
 
 
 @@@@ Diário de Aula
