@@ -8,6 +8,7 @@ Material de estudo:
 - Passagem de argumento pela rota nomeada: https://docs.flutter.dev/cookbook/navigation/navigate-with-arguments
 - StatelessWidget e StatefullWidget
  - https://www.youtube.com/watch?v=F5BH0neglbc
+- Gestão de estado: https://docs.flutter.dev/data-and-backend/state-mgmt/intro
 
 
 >>>> Roteiro de Aula
