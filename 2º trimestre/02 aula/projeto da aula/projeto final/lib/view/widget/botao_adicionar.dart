@@ -7,7 +7,7 @@ class BotaoAdicionar extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return FloatingActionButton(
-      onPressed: () => acao,
+      onPressed: () => acao(),
       tooltip: 'Adicionar Novo',
       child: const Icon(Icons.add),
     );
