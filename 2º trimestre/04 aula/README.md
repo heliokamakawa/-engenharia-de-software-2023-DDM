@@ -14,3 +14,4 @@ https://www.macoratti.net/19/08/flut_accsqlite1.htm
 - Implementar o SQLite no seu projeto.
 
 Sequência aula
+[Contribution guidelines for this project](arquivos/criar_arquivo.png)
