@@ -155,7 +155,7 @@ class Conexao{
 ### uso do async await
 ```dart
 class Conexao{
-  static Future<Database> criar() async { //como estamos utilizando o await, precisamos tornar a função assíncrona
+  static Future<Database> criar() async { //como estamos utilizando o await dentro da função, precisamos tornar a função assíncrona, colocando async
     if(_fechado){
       String path = join(await getDatabasesPath(), 'banco.db'); // precisamos "esperar" (await) o resultado para seguir a execução
       _database = await openDatabase( // precisamos "esperar" (await) a abertuda do database para retorná-lo
