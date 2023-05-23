@@ -90,8 +90,8 @@ class Conexao{
   static bool _fechado = true;
 
   static Future<Database> criar() async {
-    if(_fechado){     // a 1º vez, database é fechado, enstão entra no if
-      // e assim, definimos comandos para inicializar o database
+    if(_fechado){     // a 1º vez, database é fechado, então 
+         // definimos comandos para inicializar o database
       _fechado = false; // no atributo de controle, definimos que agora o database não é fechado
     }
     return _database; //retornamos o database
@@ -127,3 +127,27 @@ class Conexao{
   }
 }
 ```
+
+## alguns pontos imporntantes
+### uso do static
+```dart
+class Conexao{
+  // os atributos estão com o modificador static porque são usados dentro do método estático
+  // elementos static só aceitam elementos static
+  static late Database _database; 
+  static bool _fechado = true;
+
+  //definimos static para gerar um único database para o app
+  //static pertence a classe e não ao objetio - tomar cuidado com concorrência!!!
+  static Future<Database> criar() async {
+    if(_fechado){  
+      // comandos para iniciar o database
+      _fechado = false;
+    }
+    return _conexao;
+  }
+}
+```
+>>> só é possível verificar se o database é fechado com o uso do static
+>>> com static, o elemento é da classe e assim, todos os objetos irão acessar este ponto!!! 
+>>> se não usar o modificador static, cada objeto teria o seu próprio database e assim, não teria sentido verificar se é fechado.
