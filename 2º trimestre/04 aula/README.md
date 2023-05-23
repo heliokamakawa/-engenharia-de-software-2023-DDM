@@ -32,6 +32,6 @@ flutter pub add path
 
 2ª passo - criar arquivo no projeto
 Para organização, eu criei o arquivo dentro de uma nova pasta "sqlite" em "database" 
-<img src="[(arquivos/criar_arquivo.png)](https://github.com/heliokamakawa/-engenharia-de-software-2023-DDM/blob/main/2%C2%BA%20trimestre/04%20aula/arquivos/criar_arquivo.png)" alt="Alt text" title="Optional title">
+<img src="https://github.com/heliokamakawa/-engenharia-de-software-2023-DDM/blob/main/2%C2%BA%20trimestre/04%20aula/arquivos/criar_arquivo.png" alt="Alt text" title="Optional title">
 
 3ª passo - criar a classe
