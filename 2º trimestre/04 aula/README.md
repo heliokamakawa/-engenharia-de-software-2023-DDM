@@ -14,12 +14,10 @@ https://www.macoratti.net/19/08/flut_accsqlite1.htm
 @@@@ Desenvolvimento do Projeto
 - Implementar o SQLite no seu projeto.
 
->>>> Aula
-→ baixe os arquivos e faça o projeto funcionar em um emulador
-não esqueça de adicionar a dependência
-'''
-flutter pub add mask_text_input_formatter
-'''
+Aula
+>>>baixe os arquivos e faça o projeto funcionar em um emulador
+não esqueça de adicionar a dependência (mask_text_input_formatter)
+
 Classe de conexão
 1ª passo - adicionar as dependências
 - são duas, uma do SQFLite e outra do path
