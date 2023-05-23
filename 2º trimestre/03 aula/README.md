@@ -51,3 +51,11 @@ if(parametro != null){
 @@@@ Projeto
 - Faça a impelementação do conteúdo corrente no seu projeto.
 
+Aula
+Classe de Conexao
+1º passo - criar arquivo no projeto
+
+![alt text]([http://url/to/img.png](https://github.com/heliokamakawa/-engenharia-de-software-2023-DDM/blob/main/2%C2%BA%20trimestre/03%20aula/arquivos/criar_arquivo.png))
+
+
+
