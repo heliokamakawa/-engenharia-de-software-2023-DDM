@@ -19,7 +19,7 @@ https://www.macoratti.net/19/08/flut_accsqlite1.htm
 não esqueça de adicionar a dependência (mask_text_input_formatter)
 
 ##Classe de conexão
-**adicionar as dependências
+###adicionar as dependências
 - são duas, uma do SQFLite e outra do path
 - sqflite é a biblioteca para trabalhar com sqlite
 - path é o pacote que fornece operações comuns para manipulação de caminhos: junção, divisão, normalização, etc (independente do SO).
@@ -28,11 +28,11 @@ flutter pub add sqflite
 flutter pub add path  
 ```
 
-**crie um arquivo no projeto para o script do bd
+###crie um arquivo no projeto para o script do bd
 <img src="https://github.com/heliokamakawa/-engenharia-de-software-2023-DDM/blob/main/2%C2%BA%20trimestre/04%20aula/arquivos/criar_script.png" alt="Alt text" title="Optional title">
 
 
-**defina os comandos para criar tabela(s) e registro(s)
+###defina os comandos para criar tabela(s) e registro(s)
 ```dart
 //comando para criar tabela
 const criarContato = '''
@@ -60,17 +60,17 @@ VALUES ('Hortência','(11) 9 9562-3356','hortencia@email.com','https://cdn.pixab
 '''];
 ```
 
-**criar arquivo no projeto
+###criar arquivo no projeto
 Para organização, eu criei o arquivo dentro de uma nova pasta "sqlite" em "database" 
 <img src="https://github.com/heliokamakawa/-engenharia-de-software-2023-DDM/blob/main/2%C2%BA%20trimestre/04%20aula/arquivos/criar_arquivo.png" alt="Alt text" title="Optional title">
 
-**criar a classe
+###criar a classe
 ```dart
 class Conexao{
 
 }
 ```
-**definir atributos necessários
+###definir atributos necessários
 - como é um app local para um único usuário, vamos criar uma única conexão... e para isso vamos definir o atributo de database e o de controle 
 > como são atributos que serão utilizadas somente na classe, definimos com moficador de acesso privato "-"
 ```dart
@@ -81,7 +81,7 @@ class Conexao{
   static bool _fechado = true;    //atributo de controle
 }
 ```
-**definir a lógica de inicialização do Database
+###definir a lógica de inicialização do Database
 ```dart
 import 'package:sqflite/sqflite.dart';
 
@@ -99,7 +99,7 @@ class Conexao{
 }
 ```
 
-**definir os comandos para inciar o database
+###definir os comandos para inciar o database
 ```dart
 import 'package:path/path.dart';
 import 'package:persistencia/database/sqlite/scriptbd.dart';
