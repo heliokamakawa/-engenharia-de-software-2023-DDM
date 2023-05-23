@@ -5,8 +5,6 @@ https://pub.dev/packages/path
 https://balta.io/blog/flutter-sqlite
 https://www.macoratti.net/19/08/flut_accsqlite1.htm
 
->>>>>Diário de Aula
-
 @@@@ Diário de Aula
  - Descrever os pontos principais da classe de conexão (padrão utilizado, cuidados necessários, como funciona e como utilizar);
  - Descrever os pontos principais da classe DAO (padrão utilizado, cuidados necessários, como funciona e como utilizar);
@@ -167,3 +165,9 @@ class Conexao{
   }
 }
 ```
+
+### é necessário entender cada parâmetro do openDatabase
+acesse https://pub.dev/packages/sqflite e descubra 
+- para que passamos o path?
+- o que é para que serve o version? o que ocorre se mudar? 
+- quando o onCreate é executado? A cada chamada do método criar, onCreate é executado?
