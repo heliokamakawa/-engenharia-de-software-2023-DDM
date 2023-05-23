@@ -23,13 +23,18 @@ Classe de conexão
 - são duas, uma do SQFLite e outra do path
 - sqflite é a biblioteca para trabalhar com sqlite
 - path é o pacote que fornece operações comuns para manipulação de caminhos: junção, divisão, normalização, etc (independente do SO).
-'''
+```cmd
 flutter pub add sqflite
 flutter pub add path  
-'''
+```
 
 2ª passo - criar arquivo no projeto
 Para organização, eu criei o arquivo dentro de uma nova pasta "sqlite" em "database" 
 <img src="https://github.com/heliokamakawa/-engenharia-de-software-2023-DDM/blob/main/2%C2%BA%20trimestre/04%20aula/arquivos/criar_arquivo.png" alt="Alt text" title="Optional title">
 
 3ª passo - criar a classe
+```dart
+class Conexao{
+
+}
+```
