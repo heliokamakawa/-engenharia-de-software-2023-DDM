@@ -128,7 +128,7 @@ class Conexao{
 }
 ```
 
-## alguns pontos imporntantes
+## Alguns pontos imporntantes
 ### uso do static
 ```dart
 class Conexao{
@@ -151,3 +151,19 @@ class Conexao{
 >>> só é possível verificar se o database é fechado com o uso do static
 >>> com static, o elemento é da classe e assim, todos os objetos irão acessar este ponto!!! 
 >>> se não usar o modificador static, cada objeto teria o seu próprio database e assim, não teria sentido verificar se é fechado.
+
+### uso do async await
+```dart
+class Conexao{
+  static Future<Database> criar() async { //como estamos utilizando o await, precisamos tornar a função assíncrona
+    if(_fechado){
+      String path = join(await getDatabasesPath(), 'banco.db'); // precisamos "esperar" (await) o resultado para seguir a execução
+      _database = await openDatabase( // precisamos "esperar" (await) a abertuda do database para retorná-lo
+       [...]
+      );
+      _fechado = false;
+    }
+    return _database;
+  }
+}
+```
