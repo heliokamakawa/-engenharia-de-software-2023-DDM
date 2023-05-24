@@ -208,9 +208,11 @@ E retornarmos se deu certo (return linhasAfetas > 0) - se linhasAfetadas for mai
   }
 ```
 #### IMPORTANTE SABER!!! - Implementação salvar
+O método salvar é utilizado em 2 situações: (1) alteração de um contato existente e (2) inserção de um novo contato. <br>
+Assim, precisamos definir uma lógica para tratar estes 2 casos...
 ```dart
     if(contato.id == null){  //se id é nulo, então é um novo registro
-      [...]                   //desta forma, aqui definimos comandos para salvar um novo contatop
+      [...]                   //desta forma, aqui definimos comandos para salvar um novo contato
     }else{                  //caso contrário, se tiver id, significa que é alteração
       [...]                   //desta forma, aqui definimos comandos para alterar um contato
     }
