@@ -146,7 +146,7 @@ No caso, estamos informando que o nome da coluna é id, e o valor é id que vem 
 ```dart
 if (maps.isEmpty) throw Exception('Não foi encontrado registro com este id');
 /*
-Aqui estamos validando se caso não tiver registro.
+Aqui estamos tratando no caso em que não for encontrato registro do id passado no parâmetro.
 */
 ```
 
