@@ -91,12 +91,12 @@ Agora sim, implementamos o "consultarTodos".
 ```dart
   @override
   Future<List<Contato>> consultarTodos() async {
-    Database db = await  Conexao.criar(); 
+    Database db = await  Conexao.criar(); [^1]
     List<Contato> lista = (await db.query('contato')).map<Contato>(converterContato).toList();
     return lista;
   }
 ```
-
+[^1]: Criando o Database.
 
 ### Implementação consultar
 
