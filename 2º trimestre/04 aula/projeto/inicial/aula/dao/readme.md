@@ -96,13 +96,18 @@ Agora sim, implementamos o "consultarTodos".
     return lista;
   }
 ```
-#### Importante saber!!! - Implementação consultarTodos  
+#### IMPORTANTE SABER!!! - Implementação consultarTodos  
 ```dart
 Database db = await  Conexao.criar(); 
+/*
+Aqui estamos pegando referência de Database - da nossa classe de Conexao. 
+Lembre-se que, na 1º vez, database é criado e partir da 2º, o que foi criado na 1º vez, será reutilizado.
+*/
 ```
-Pegando referência de Database. Lembre-se que, na 1º vez, database é criado e partir da 2º, será reutilizado o que foi criado na 1º.
+
 ```dart
-db.query('contato')) // método do SQFLite para fazer a consulta de todos os contatos
+db.query('contato')) 
+// método do SQFLite para fazer a consulta de todos os contatos
 ```
 ```dart
 .map<Contato>(converterContato).toList(); 
@@ -112,6 +117,7 @@ no nosso caso, estamos: <br>
 (1) percorrendo a lista do tipo map que veio da consulta no BD; <br>
 (2) chamando o nosso método "converterContato" para converter map (de cada registro do resultado) para a nossa classe contato; <br>
 (3) retornar uma nova lista do tipo contato.
+E por fim, o map, de fato, retorna o tipo Iterable, e assim, precisamos chamar o método toList para convertê-lo em uma lista.
 <br>
 */
 ```
@@ -127,12 +133,36 @@ no nosso caso, estamos: <br>
     return converterContato(resultado);
   }
 ```
-#### Implementação consultar - Importante saber!!!
-Pegando referência de Database. Lembre-se que, na 1º vez, database é criado e partir da 2º, será reutilizado o que foi criado na 1º.
+#### IMPORTANTE SABER!!! - Implementação consultar
+
 ```dart
-Database db = await  Conexao.criar(); 
+await db.query('Contato',where: 'id = ?',whereArgs: [id]);
+/*
+Para consultar um contato específico, passamos como parâmetro o nome e o valor do filtro de consulta. 
+No caso, estamos informando que o nome da coluna é id, e o valor é id que vem do parâmetro.
+*/
 ```
 
+```dart
+if (maps.isEmpty) throw Exception('Não foi encontrado registro com este id');
+/*
+Aqui estamos validando se caso não tiver registro.
+*/
+```
+
+```dart
+ Map<dynamic,dynamic> resultado = maps.first;
+/*
+Armazenando resultado...
+*/
+```
+
+```dart
+return converterContato(resultado);
+/*
+Convertendo com o nosso método e retornando o contato.
+*/
+```
 ### Implementação excluir
 ```dart
   @override
