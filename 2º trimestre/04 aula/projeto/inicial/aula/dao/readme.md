@@ -173,8 +173,16 @@ Convertendo com o nosso método e retornando o contato.
     return linhasAfetas > 0;
   }
 ```
-
-
+#### IMPORTANTE SABER!!! - Implementação excluir
+```dart
+int linhasAfetas = await db.rawDelete(sql, [id]);
+return linhasAfetas > 0;
+/*
+db.rawDelete tente executar o comando e retorno a quantidade de linhas afetadas no BD.<br>
+Assim, pegamos a referências de linhas afetadas (int linhasAfetas = ...).<br>
+E retornarmos se deu certo (return linhasAfetas > 0) - se linhasAfetadas for maior que 0, significa que a exclusão foi realizada.
+*/
+```
 ### Implementação salvar
 
 ```dart
@@ -199,5 +207,38 @@ Convertendo com o nosso método e retornando o contato.
     return contato;
   }
 ```
-
-
+#### IMPORTANTE SABER!!! - Implementação salvar
+```dart
+    if(contato.id == null){  //se id é nulo, então é um novo registro
+      [...]                   //desta forma, aqui definimos comandos para salvar um novo contatop
+    }else{                  //caso contrário, se tiver id, significa que é alteração
+      [...]                   //desta forma, aqui definimos comandos para alterar um contato
+    }
+    return contato;
+  }
+  ```
+  ```dart
+  // comando para salvar um novo contato no BD.
+      // definindo SQL.
+      sql = 'INSERT INTO contato (nome, telefone,email,url_avatar) VALUES (?,?,?,?)';
+      // comando para salvar no SQLite (db.rawInsert). 
+      // db.rawInsert tenta salvar e se der certo, retorna o id gerado automaticamente
+      int id = await db.rawInsert(sql,[contato.nome,contato.telefone,contato.email,contato.urlAvatar]);
+      /*
+      definimos a classe de Contato do tipo final - os valroes não podem ser alterados depois de definidos,
+      assim, para retornar o contato com id, precisamos criar um novo contato e inserir o id.
+      */
+      contato = Contato(
+        id: id,
+        nome: contato.nome, 
+        telefone: contato.telefone, 
+        email: contato.email, 
+        urlAvatar: contato.urlAvatar);
+```
+```dart
+    //comando para alterar
+      //sql para alterar
+      sql = 'UPDATE contato SET nome = ?, telefone =?, email = ?, url_avatar= ? WHERE id = ?';
+      //chamando o método db.rawUpdate da biblioteca sqflite para alterar e passando os valores
+      db.rawUpdate(sql,[contato.nome, contato.telefone, contato.email, contato.urlAvatar, contato.id]);
+```
