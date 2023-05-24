@@ -239,8 +239,9 @@ Assim, precisamos definir uma lógica para tratar estes 2 casos...
 ```
 ```dart
     //comando para alterar
-      //sql para alterar
+      //sql para alterar de forma mais segura, no qual, preparamos os parâmetros (?) para serem inseridos - PreparedStatement
       sql = 'UPDATE contato SET nome = ?, telefone =?, email = ?, url_avatar= ? WHERE id = ?';
-      //chamando o método db.rawUpdate da biblioteca sqflite para alterar e passando os valores
+      //chamando o método "db.rawUpdate" da biblioteca sqflite para alterar 
+      //o método "db.rawUpdate" solicita 2 parâmetros: (1) o SQL de alteração e (2) os parâmetros para substituir '?' do comando SQL.
       db.rawUpdate(sql,[contato.nome, contato.telefone, contato.email, contato.urlAvatar, contato.id]);
 ```
