@@ -20,5 +20,5 @@
 >>>não esqueça de adicionar a dependência (mask_text_input_formatter)
 
 [Aula 01 - implementação da classe de conexão](projeto/inicial/aula/conexao/readme.md) <br>
-[Aula 01 - implementação da classe DAO](projeto/inicial/aula/conexao/readme.md) <br>
+[Aula 02 - implementação da classe DAO](projeto/inicial/aula/conexao/readme.md) <br>
 
