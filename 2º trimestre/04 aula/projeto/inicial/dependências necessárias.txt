@@ -1,0 +1,1 @@
+flutter pub add mask_text_input_formatter;
