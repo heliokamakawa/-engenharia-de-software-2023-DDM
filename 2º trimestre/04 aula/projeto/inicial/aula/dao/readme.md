@@ -38,7 +38,7 @@ class ContatoDAOSQLite implements ContatoInterfaceDAO{
 → Ao implementar a interface "ContatoInterfaceDAO" será necessário implementar todos os métodos da interface;<br>
 → "Create 4 missing overrrides".
 <img src="https://github.com/heliokamakawa/-engenharia-de-software-2023-DDM/blob/main/2%C2%BA%20trimestre/04%20aula/arquivos/interface_dao.png" alt="Alt text" title="imagem da interface dao">
-
+Implementando os métodos, a nossa classe deverá ficar da seguinte forma:
 ```dart
 import 'package:persistencia/view/dto/contato.dart';
 import 'package:persistencia/view/interface/contato_interface_dao.dart';
