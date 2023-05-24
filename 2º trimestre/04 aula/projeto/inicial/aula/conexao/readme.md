@@ -150,7 +150,8 @@ class Conexao{
 }
 ```
 
-### é necessário entender cada parâmetro do openDatabase
+### Atividade
+É ESSENCIAL entender cada parâmetro do openDatabase
 acesse https://pub.dev/packages/sqflite e descubra 
 - para que passamos o path?
 - o que é para que serve o version? o que ocorre se mudar? 
