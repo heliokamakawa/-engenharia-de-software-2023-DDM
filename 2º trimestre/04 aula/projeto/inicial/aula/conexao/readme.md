@@ -4,8 +4,8 @@ Adicione as dependências necessárias:<br>
 → sqflite - biblioteca para trabalhar com sqlite;<br>
 → path - pacote que fornece operações comuns para manipulação de caminhos: junção, divisão, normalização, etc (independente do SO).<br>
 ```cmd
-flutter pub add sqflite
-flutter pub add path  
+flutter pub add sqflite;
+flutter pub add path;  
 ```
 ## Definindo script BD
 ### Criando arquivo do script BD.
