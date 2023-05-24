@@ -73,8 +73,8 @@ class ContatoDAOSQLite implements ContatoInterfaceDAO{
 - Antes de mais nada, precisamos entender que na consulta, os dados retornados pelo SQFLite tem o formato de "map<dynamic,dynamic>".<br>
 - O primeiro dynamic refere-se ao nome da coluna e o segundo o valor. <br>
 >Exemplo: 
->Se tiver a tabela estado no BD, onde há uma coluna nome, com o registro PARANÁ, 
->na consulta, será retornado um map: {nome: 'PARANÁ'}
+>Se tiver a tabela estado no BD, onde há uma coluna nome, com o registro PARANÁ, <br>
+>na consulta, será retornado um map: {nome: 'PARANÁ'}<br>
 - Assim, para facilitar as coisas, vamos criar o método de conversão que recebe este "map" e retorne a nossa classe "Contato".<br>
 ```dart
   Contato converterContato(Map<dynamic,dynamic> resultado){
@@ -91,13 +91,30 @@ Agora sim, implementamos o "consultarTodos".
 ```dart
   @override
   Future<List<Contato>> consultarTodos() async {
-    Database db = await  Conexao.criar(); [^1]
+    Database db = await  Conexao.criar(); 
     List<Contato> lista = (await db.query('contato')).map<Contato>(converterContato).toList();
     return lista;
   }
 ```
-[^1]: Criando o Database.
-
+#### Importante saber!!! - Implementação consultarTodos  
+```dart
+Database db = await  Conexao.criar(); 
+```
+Pegando referência de Database. Lembre-se que, na 1º vez, database é criado e partir da 2º, será reutilizado o que foi criado na 1º.
+```dart
+db.query('contato')) // método do SQFLite para fazer a consulta de todos os contatos
+```
+```dart
+.map<Contato>(converterContato).toList(); 
+/*
+o map é um método da biblioteca do dart que percorre uma lista, executa a função (que recebe como parâmetro) e retorna uma NOVA lista.<br>
+no nosso caso, estamos: <br>
+(1) percorrendo a lista do tipo map que veio da consulta no BD; <br>
+(2) chamando o nosso método "converterContato" para converter map (de cada registro do resultado) para a nossa classe contato; <br>
+(3) retornar uma nova lista do tipo contato.
+<br>
+*/
+```
 ### Implementação consultar
 
 ```dart
@@ -110,9 +127,13 @@ Agora sim, implementamos o "consultarTodos".
     return converterContato(resultado);
   }
 ```
+#### Implementação consultar - Importante saber!!!
+Pegando referência de Database. Lembre-se que, na 1º vez, database é criado e partir da 2º, será reutilizado o que foi criado na 1º.
+```dart
+Database db = await  Conexao.criar(); 
+```
 
 ### Implementação excluir
-
 ```dart
   @override
   Future<bool> excluir(id) async {
