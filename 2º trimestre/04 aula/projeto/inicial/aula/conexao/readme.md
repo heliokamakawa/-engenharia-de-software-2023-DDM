@@ -10,7 +10,7 @@ flutter pub add path;
 ## Definindo script BD
 ### Criando arquivo do script BD.
 Crie um arquivo no projeto para o script do BD. <br>
-Para organização, eu criei o arquivo dentro de uma nova pasta "sqlite" da pasta "database". 
+Para organização, eu criei o arquivo dentro de uma nova pasta "sqlite" da pasta "database". <br>
 <img src="https://github.com/heliokamakawa/-engenharia-de-software-2023-DDM/blob/main/2%C2%BA%20trimestre/04%20aula/arquivos/criar_script.png" alt="Alt text" title="Optional title">
 
 ### Comandos SQL
@@ -43,7 +43,7 @@ VALUES ('Hortência','(11) 9 9562-3356','hortencia@email.com','https://cdn.pixab
 ```
 ## Definindo a classe de Database
 ### Criar um arquivo no projeto
-Para organização, eu criei o arquivo chamado de "conexao.dart" dentro de uma nova pasta "sqlite" da pasta "database".
+Para organização, eu criei o arquivo chamado de "conexao.dart" dentro de uma nova pasta "sqlite" da pasta "database".<br>
 <img src="https://github.com/heliokamakawa/-engenharia-de-software-2023-DDM/blob/main/2%C2%BA%20trimestre/04%20aula/arquivos/criar_arquivo.png" alt="Alt text" title="Optional title">
 
 ### criar a classe no arquivo criado
