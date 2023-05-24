@@ -134,7 +134,7 @@ class Conexao{
 >>> com static, o elemento é da classe e assim, todos os objetos irão acessar este ponto!!! 
 >>> se não usar o modificador static, cada objeto teria o seu próprio database e assim, não teria sentido verificar se é fechado.
 
-### uso do async await
+### Uso do async await
 ```dart
 class Conexao{
   static Future<Database> criar() async { //como estamos utilizando o await dentro da função, precisamos tornar a função assíncrona, colocando async
