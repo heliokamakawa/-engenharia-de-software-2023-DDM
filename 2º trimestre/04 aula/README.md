@@ -1,9 +1,9 @@
 ## Conteúdo principal: Persistência logal (SQLite)
 ### Material de estudo:
-[sqflite](https://pub.dev/packages/sqflite)
-[path](https://pub.dev/packages/path)
-[Persistência local - balta.io](https://balta.io/blog/flutter-sqlite)
-[Persistência local - macoratti](https://www.macoratti.net/19/08/flut_accsqlite1.htm)
+[sqflite](https://pub.dev/packages/sqflite).
+[path](https://pub.dev/packages/path).
+[Persistência local - balta.io](https://balta.io/blog/flutter-sqlite).
+[Persistência local - macoratti](https://www.macoratti.net/19/08/flut_accsqlite1.htm).
 
 ## Diário de Aula
  - Descrever os pontos principais da classe de conexão (padrão utilizado, cuidados necessários, como funciona e como utilizar);
