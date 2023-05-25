@@ -22,3 +22,35 @@
 [Aula 01 - implementação da classe de conexão](projeto/inicial/aula/conexao/readme.md) <br>
 [Aula 02 - implementação da classe DAO](projeto/inicial/aula/dao/readme.md) <br>
 
+altere o dao utilizado no projeto
+```dart
+class _ContatoListaState extends State<ContatoLista> {
+  ContatoInterfaceDAO dao = ContatoDAOSQLite();
+  [...]
+}
+
+
+class ContatoForm extends StatefulWidget{
+  const ContatoForm({Key? key}) : super(key: key);
+
+  @override
+  State<ContatoForm> createState() => _ContatoFormState();
+}
+
+class _ContatoFormState extends State<ContatoForm> {
+  @override
+  Widget build(BuildContext context){
+    [...]
+  }
+  
+  Widget criarBotao(BuildContext context){
+    return Botao(
+      context: context,
+      salvar: (){
+        [...]
+          ContatoInterfaceDAO dao = ContatoDAOSQLite(); 
+  }
+}
+```
+
+
