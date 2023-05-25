@@ -31,13 +31,6 @@ class _ContatoListaState extends State<ContatoLista> {
 ```
 altere o dao utilizado no form
 ```dart
-class ContatoForm extends StatefulWidget{
-  const ContatoForm({Key? key}) : super(key: key);
-
-  @override
-  State<ContatoForm> createState() => _ContatoFormState();
-}
-
 class _ContatoFormState extends State<ContatoForm> {
   @override
   Widget build(BuildContext context){
@@ -49,7 +42,7 @@ class _ContatoFormState extends State<ContatoForm> {
       context: context,
       salvar: (){
         [...]
-          ContatoInterfaceDAO dao = ContatoDAOSQLite(); 
+          ContatoInterfaceDAO dao = ContatoDAOSQLite(); //<<<<<<<<<<<<<<<
   }
 }
 ```
