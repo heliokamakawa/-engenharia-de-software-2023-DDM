@@ -100,7 +100,7 @@ class Conexao{
         version: 1,                                    // versão
         onCreate: (db, v){                             // criando os elementos (tabelas e registros) do BD
           db.execute(criarContato);
-          insercoesCopntato.forEach(db.execute);
+          insercoesContato.forEach(db.execute);
         }, 
       );
       _fechado = false;
