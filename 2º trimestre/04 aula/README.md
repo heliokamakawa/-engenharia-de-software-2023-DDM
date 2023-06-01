@@ -19,9 +19,10 @@
 >>>baixe os arquivos e faça o projeto funcionar em um emulador
 >>>não esqueça de adicionar a dependência (mask_text_input_formatter)
 
-[Aula 01 - implementação da classe de conexão](projeto/inicial/aula/conexao/readme.md) <br>
-[Aula 02 - implementação da classe DAO](projeto/inicial/aula/dao/readme.md) <br>
+[Passo 01 - implementação da classe de conexão](projeto/inicial/aula/conexao/readme.md) <br>
+[Passo 02 - implementação da classe DAO](projeto/inicial/aula/dao/readme.md) <br>
 
+Passo 03
 altere o dao utilizado na lista
 ```dart
 class _ContatoListaState extends State<ContatoLista> {
