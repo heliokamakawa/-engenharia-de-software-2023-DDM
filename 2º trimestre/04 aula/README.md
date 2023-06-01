@@ -22,15 +22,15 @@
 [Passo 01 - implementação da classe de conexão](projeto/inicial/aula/conexao/readme.md) <br>
 [Passo 02 - implementação da classe DAO](projeto/inicial/aula/dao/readme.md) <br>
 
-Passo 03
-altere o dao utilizado na lista
+Passo 03 - altere o dao utilizado<br>
+→ Na lista
 ```dart
 class _ContatoListaState extends State<ContatoLista> {
   ContatoInterfaceDAO dao = ContatoDAOSQLite();
   [...]
 }
 ```
-altere o dao utilizado no form
+No form<br>
 ```dart
 class _ContatoFormState extends State<ContatoForm> {
   @override
