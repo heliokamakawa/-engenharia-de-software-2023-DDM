@@ -1,14 +1,18 @@
-Tema: Formulários
-Material de estudo:
+# Tema: (1) CRUD BÁSICO; (2) CRUD com associação;
 
+## Diário de Aula
+ATÉ 21h → 2 CRUD BÁSICO FUNCIONANDO; <br>
+ATÉ 22H30 
+- 1 CRUD COM ASSOCIAÇÃO FUNCIONANDO OU ELABORAR O MATEREIAL DE ESTUDO DO PROJETO COM CRUD COM ASSOCIAÇÃO<br>
 
+### MATERIAL DE ESTUDO
+- Quais bibliotecas necessárias;
+- Quais conteúdos?
+- Qual a sequência correta?
+- Explicação dos papéis das classes.
+- Explicação dos principais pontos de todas as classes envolvidas.
 
->>>>>Diário de Aula
+## Desenvolvimento do Projeto
+- 2 CRUD BÁSICO
+- 2 CRUD COM ASSOCIAÇÃO 
 
-@@@@ Diário de Aula
- - Faça o seu diário de aula (anotações, exemplos e comentários); 
-
-@@@@ Desenvolvimento do Projeto
-
-
-Sequência aula
