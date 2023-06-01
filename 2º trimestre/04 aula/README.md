@@ -49,13 +49,15 @@ class _ContatoFormState extends State<ContatoForm> {
 ```
 
 ## Possíveis erros
-→ Erro na escrita do script, no qual, irá gerar:<br>
+### Erro na escrita do script
+A escrita errada dos comandos do script BD irá gerar o seguinte erro no Debug Console:<br>
 ```cmd
 E/SQLiteLog( 8492): near "CREATEu": syntax error in "indicará o comando errado"
 ```
-Na primeira execução ele roda a criação da tabela e por algum motivo gera um erro na inserção das linhas.<br>
+### Cria a tabela sem registros
+Caso o comando de criação da tabela esteja correta e o de inserção não. Na primeira execução a tabela será criada e a inserção não.<br>
 Como ele já rodou a primeira vez, por mais que corrija o script ele não irá executá-lo novamente.
-Assim, para que rode novamente, podemos excluir o database
+Assim, para que rode novamente os cript, podemos excluir o database
 ```dart
 static Future<Database> criar() async {
     if(_fechado){
