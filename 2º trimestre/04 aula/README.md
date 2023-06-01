@@ -30,7 +30,7 @@ class _ContatoListaState extends State<ContatoLista> {
   [...]
 }
 ```
-No form<br>
+→ No form<br>
 ```dart
 class _ContatoFormState extends State<ContatoForm> {
   @override
