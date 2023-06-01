@@ -52,7 +52,7 @@ class _ContatoFormState extends State<ContatoForm> {
 ### Erro na escrita do script
 A escrita errada dos comandos do script BD irá gerar o seguinte erro no Debug Console:<br>
 ```cmd
-E/SQLiteLog( 8492): near "CREATEu": syntax error in "indicará o comando errado"
+E/SQLiteLog( 8492): near "COMANDO ERRADO": syntax error in "texto do comando"
 ```
 ### Cria a tabela sem registros
 Caso o comando de criação da tabela esteja correta e o de inserção não. Na primeira execução a tabela será criada e a inserção não.<br>
