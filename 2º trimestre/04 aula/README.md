@@ -76,5 +76,18 @@ static Future<Database> criar() async {
     return _database;
   }
 ```
-
+### Nome de coluna errada
+Em converterContato do DAO, por falta de atenção, pode ter nome de colunas erradas<br>
+→ confira o nome de todas as colunas com o script
+```dart
+Contato converterContato(Map<dynamic,dynamic> resultado){
+    return Contato(
+      id : resultado['id'],
+      nome: resultado['nomi'],            // >>>>está nomi ao invés de nome
+      telefone: resultado['telefone'],
+      email: resultado['email'],
+      urlAvatar:  resultado['url_avatar']
+    );
+  }
+```
 
