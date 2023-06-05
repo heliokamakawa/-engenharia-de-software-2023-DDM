@@ -15,7 +15,7 @@
   
  
 ## AULA
-### Definir Script BD; 
-### Definir DAO;
-### Alterar Lista; 
-### Alterar Formulário;
+### Passo 01 - Definir Script BD; 
+### Passo 02 - Definir DAO;
+### Passo 03 - Alterar Lista; 
+### Passo 04 - Alterar Formulário;
