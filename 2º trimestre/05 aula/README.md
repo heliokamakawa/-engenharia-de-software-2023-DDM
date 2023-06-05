@@ -1,18 +1,21 @@
-# Tema: (1) CRUD BÁSICO; (2) CRUD com associação;
+# Tema: CRUD com associação
 
+## MATERIAL DE ESTUDO
+- SQLite Foreign Key Support - https://www.sqlite.org/foreignkeys.html
+- Flutter (oficial) - DropdownButton<T> class - https://api.flutter.dev/flutter/material/DropdownButton-class.html?gclid=Cj0KCQjwj_ajBhCqARIsAA37s0zcNoOwCky2JtM7EJOdtDS41woKL_1SANSFTn0r_K9SUhutc5rAdpIaAhpeEALw_wcB&gclsrc=aw.ds
+- Flutter (oficial) - DropdownMenuItem - https://api.flutter.dev/flutter/material/DropdownMenuItem-class.html
+  
 ## Diário de Aula
-ATÉ 21h → 2 CRUD BÁSICO FUNCIONANDO; <br>
-ATÉ 22H30 
-- 1 CRUD COM ASSOCIAÇÃO FUNCIONANDO OU ELABORAR O MATEREIAL DE ESTUDO DO PROJETO COM CRUD COM ASSOCIAÇÃO<br>
-
-### MATERIAL DE ESTUDO
-- Quais bibliotecas necessárias;
-- Quais conteúdos?
-- Qual a sequência correta?
-- Explicação dos papéis das classes.
-- Explicação dos principais pontos de todas as classes envolvidas.
+2 CRUD BÁSICO FUNCIONANDO; <br>
+2 CRUD COM ASSOCIAÇÃO FUNCIONANDO<br>
 
 ## Desenvolvimento do Projeto
 - 2 CRUD BÁSICO
 - 2 CRUD COM ASSOCIAÇÃO 
-
+  
+ 
+## AULA
+### Definir Script BD; 
+### Definir DAO;
+### Alterar Lista; 
+### Alterar Formulário;
