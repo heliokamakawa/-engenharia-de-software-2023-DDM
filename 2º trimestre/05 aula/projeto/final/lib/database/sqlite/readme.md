@@ -2,7 +2,7 @@
 
 ## Criação das tabelas
 
-```sql
+```dart
 const criarTabelas = ['''
  CREATE TABLE estado(
     id INTEGER NOT NULL PRIMARY KEY
@@ -48,7 +48,7 @@ const criarTabelas = ['''
 ```
 
 ## Definindo Inserções
-```sql
+```dart
 ];
 //array de inserções
 const insercoes = [
