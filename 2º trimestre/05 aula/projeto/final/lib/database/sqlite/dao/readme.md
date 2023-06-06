@@ -11,23 +11,34 @@
 Então preste atenção neste ponto e vamos aos detalhes do código!!!
 
 ### Método converter
-Entenda o PONTO CRÍTICO >>>ASSOCIAÇÃO<<< - entendendo isso ficará fácil e saberá como framework funciona!<br>
-- no resultado a associção é do tipo int → estado_id (banco de dados - fk do estado);
-- o projeto é Orientado a Objeto, então precisamos, ao invés de int, um objeto do tipo Estado;
-Como fazemos isso???
-O método RECEBE como PARÂMETRO o resultado que vem do BD → - valores da tabela estado e não objetos.<br>
+Entenda o PONTO CRÍTICO >>>ASSOCIAÇÃO<<< - entendendo isso ficará fácil e saberá como qualquer framework funciona!<br>
+O método converter RECEBE como PARÂMETRO o resultado que vem do BD → valores da tabela cidade e não objetos.<br>
 ```dart
  converter(Map<dynamic,dynamic> resultado) async {
-//resultado traz os valores da cidade! Que tem a Foreign Key do estado. No caso, estado_id - coluna do tipo int.
+/*
+resultado traz os valores da cidade! Que tem a Foreign Key do estado. 
+No caso, estado_id - coluna do tipo int. >>>NÃO É UM OBJETO ESTADO
+*/
 ```
 
-O método RETORNA o OBJETO Cidade, pois o nosso projeto é Orientado a Objeto.<br>
+O método converter RETORNA o OBJETO Cidade, pois o nosso projeto é Orientado a Objeto.<br>
 ```dart
 Future<Cidade> converter...
 //o objeto cidade precisa ter o OBJETO estado e não a coluna do tipo int.
 ```
+Assim precisamos "converter" a Foreign Key que vem do banco para um Objeto Estado! Como???<br>
+(1) criamos um objeto estado;<br>
+(2) para preencher este objeto, usamos o método consultar por id do DAO do estado.<br>
+```dart
+    Estado estado = await EstadoDAOSQLite().consultar(resultado['estado_id']);
+    /*
+    o método consultar do DAO do estado irá:
+    (1) irá buscar os dados estado conforme o id (estado_id) que passamos;
+    (2) converter os dados para o objeto estado;
+    (3) retornar o objeto estado preenchido!!!
+    */
+```
 
- 
 ```dart
 Future<Cidade> converter(Map<dynamic,dynamic> resultado) async {
     
