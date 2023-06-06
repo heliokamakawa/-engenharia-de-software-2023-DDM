@@ -16,8 +16,8 @@ O método converter RECEBE como PARÂMETRO o resultado que vem do BD → valores
 ```dart
  converter(Map<dynamic,dynamic> resultado) async {
 /*
-resultado traz os valores da cidade! Que tem a Foreign Key do estado. 
-No caso, estado_id - coluna do tipo int. >>>NÃO É UM OBJETO ESTADO
+O parâmetro resultado traz os valores da cidade, que tem a Foreign Key do estado - o estado_id. 
+estado_id é um valor da coluna do BD do tipo int, >>>NÃO É O OBJETO ESTADO
 */
 ```
 
