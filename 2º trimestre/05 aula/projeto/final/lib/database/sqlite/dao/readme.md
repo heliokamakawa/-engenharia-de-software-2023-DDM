@@ -32,13 +32,25 @@ Assim precisamos "converter" a Foreign Key que vem do banco para um Objeto Estad
 ```dart
     Estado estado = await EstadoDAOSQLite().consultar(resultado['estado_id']);
     /*
+    Estado estado → definindo o objeto estado
+    = await → como o método é assíncrono, ordenamos "esperar" (await)
+    EstadoDAOSQLite().consultar →  consultar do dao estado
+    resultado['estado_id'] → o id do estado específico da cidade
     o método consultar do DAO do estado irá:
     (1) irá buscar os dados estado conforme o id (estado_id) que passamos;
     (2) converter os dados para o objeto estado;
     (3) retornar o objeto estado preenchido!!!
     */
 ```
-
+Agora que temos o OBJETO estado e não a Foreign Key, inserimos/associamos a cidade que será retornada
+```dart
+    return Cidade(
+      id : resultado['id'],
+      nome: resultado['nome'],
+      estado: estado   // associando o OBJETO estado a cidade
+    );
+```
+Código completo
 ```dart
 Future<Cidade> converter(Map<dynamic,dynamic> resultado) async {
     
