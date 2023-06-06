@@ -11,7 +11,7 @@
 Então preste atenção neste ponto e vamos aos detalhes do código!!!
 
 ### Método converter
-Entenda o PONTO CRÍTICO >>>ASSOCIAÇÃO<<< - entendendo isso ficará fácil e saberá como qualquer framework funciona!<br>
+Entenda o PONTO CRÍTICO, no caso, a >>>ASSOCIAÇÃO<<< - entendendo isso ficará fácil e saberá como qualquer framework funciona!<br>
 O método converter RECEBE como PARÂMETRO o resultado que vem do BD → valores da tabela cidade e não objetos.<br>
 ```dart
  converter(Map<dynamic,dynamic> resultado) async {
