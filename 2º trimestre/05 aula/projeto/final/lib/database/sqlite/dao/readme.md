@@ -1,7 +1,7 @@
 # Código completo:
-- [DAO do estado](estado_dao_sqlite.dart)<br>
-- [DAO do cidade](cidade_dao_sqlite.dart)<br>
-- [DAO do contato](contato_dao_sqlite.dart)<br>
+- [DAO do estado - sem associção](estado_dao_sqlite.dart)<br>
+- [DAO do cidade - tem associação com estado](cidade_dao_sqlite.dart)<br>
+- [DAO do contato - tem associação com cidade](contato_dao_sqlite.dart)<br>
 
 # Entendendo o código:
 ## Qual a diferença entre DAO com ou sem associação?
