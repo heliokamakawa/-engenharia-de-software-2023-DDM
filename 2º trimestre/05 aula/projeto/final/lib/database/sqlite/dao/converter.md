@@ -12,7 +12,7 @@ Exemplo: Tabela Cidade que tem o registro da cidade Maringá retornaria
 */
 ```
 
-O método RETORNA o OBJETO Cidade com o respectivo OBJETO Estado, pois o nosso projeto é Orientado a Objeto.<br>
+O método "converter" deve RETORNAR o OBJETO Cidade com o respectivo OBJETO Estado, pois o nosso projeto é Orientado a Objeto.<br>
 ```dart
 Future<Cidade> converter...
 //o objeto cidade precisa ter o OBJETO estado e não a coluna do tipo int.
