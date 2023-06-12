@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:persistencia/rota.dart';
+import 'package:persistencia/view/cidade_lista.dart';
 import 'package:persistencia/view/contato_detalhe.dart';
 import 'package:persistencia/view/contato_form.dart';
 import 'package:persistencia/view/contato_lista.dart';
@@ -17,9 +18,10 @@ class App extends StatelessWidget {
         primarySwatch: Colors.blue,
       ),
       routes: {
-        Rota.contatoLista :(context) => ContatoLista(),
-        Rota.contatoForm :(context) => ContatoForm(),
-        Rota.contatoDetalhe :(context) => ContatoDetalhe(),
+        Rota.cidadeLista :(context) => const CidadeLista(),
+        Rota.contatoLista :(context) => const ContatoLista(),
+        Rota.contatoForm :(context) => const ContatoForm(),
+        Rota.contatoDetalhe :(context) => const ContatoDetalhe(),
       }
     );
   }
