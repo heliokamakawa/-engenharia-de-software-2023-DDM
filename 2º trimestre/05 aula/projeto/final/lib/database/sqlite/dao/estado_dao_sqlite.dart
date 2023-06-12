@@ -1,6 +1,6 @@
 import 'package:persistencia/database/sqlite/conexao.dart';
 import 'package:persistencia/view/dto/estado.dart';
-import 'package:persistencia/view/interface/estado_interface_dao%20copy.dart';
+import 'package:persistencia/view/interface/estado_interface_dao.dart';
 import 'package:sqflite/sqflite.dart'; 
 
 class EstadoDAOSQLite implements EstadoInterfaceDAO{
