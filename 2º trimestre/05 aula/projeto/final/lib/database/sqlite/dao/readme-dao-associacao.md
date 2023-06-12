@@ -41,8 +41,8 @@ class CidadeDAOSQLite implements CidadeInterfaceDAO{
 ```
 ### Criar os métodos da interface
 → Ao implementar a interface "CidadeInterfaceDAO" será necessário implementar todos os métodos da interface;<br>
-→ "Create 4 missing overrrides".
-<img src="https://github.com/heliokamakawa/-engenharia-de-software-2023-DDM/blob/main/2%C2%BA%20trimestre/04%20aula/arquivos/interface_dao.png" alt="Alt text" title="imagem da interface dao">
+→ Com a nome da classe sublinhada em vermelho, clique em sugestões (ícone lâmpada);<br>
+→ "Create 4 missing overrrides".<br>
 Implementando os métodos, a nossa classe deverá ficar da seguinte forma:
 ```dart
 import 'package:persistencia/view/dto/cidade.dart';
