@@ -178,7 +178,7 @@ Convertendo com o nosso método e retornando o contato.
 int linhasAfetas = await db.rawDelete(sql, [id]);
 return linhasAfetas > 0;
 /*
-db.rawDelete tente executar o comando e retorno a quantidade de linhas afetadas no BD.<br>
+db.rawDelete tenta executar o comando e retorna a quantidade de linhas afetadas no BD.<br>
 Assim, pegamos a referências de linhas afetadas (int linhasAfetas = ...).<br>
 E retornarmos se deu certo (return linhasAfetas > 0) - se linhasAfetadas for maior que 0, significa que a exclusão foi realizada.
 */
