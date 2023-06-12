@@ -8,6 +8,7 @@ Ano letivo 2023<br>
 
 Dependências
 ```cmd
+flutter pub add mask_text_input_formatter
 flutter pub add sqflite
 flutter pub add path  
 ```
