@@ -26,5 +26,5 @@ flutter pub add path
 ### [Passo 01 - Definir Script BD](projeto/final/lib/database/sqlite/readme.md)
 ### [Passo 02 - Definir Interface](projeto/final/lib/view/interface/readme_interface_cidade_dao.md)
 ### [Passo 03 - Definir DAO](projeto/final/lib/database/sqlite/dao/readme.md)
-### [Passo 04 - Definir a tela de lista da cidade](projeto/final/lib/view/cidade_lista.dart)
+### [Passo 04 - Definir a tela de lista da cidade](https://github.com/heliokamakawa/-engenharia-de-software-2023-DDM/blob/main/2%C2%BA%20trimestre/05%20aula/projeto/final/lib/view/widget/cidade_lista.dart)
 ### [Passo 05 - Alterar Formulário](projeto/final/lib/view/readme.md)
