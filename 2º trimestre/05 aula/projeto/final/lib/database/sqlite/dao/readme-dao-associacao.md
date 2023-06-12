@@ -40,7 +40,7 @@ class CidadeDAOSQLite implements CidadeInterfaceDAO{
 }
 ```
 ### Criar os métodos da interface
-→ Ao implementar a interface "CidadeInterfaceDAO" será necessário implementar todos os métodos da interface;<br>
+Ao implementar a interface "CidadeInterfaceDAO" será necessário implementar todos os métodos da interface. Faça da seguinte forma:<br>
 → Com a nome da classe sublinhada em vermelho, clique em sugestões (ícone lâmpada);<br>
 → "Create 4 missing overrrides".<br>
 Implementando os métodos, a nossa classe deverá ficar da seguinte forma:
