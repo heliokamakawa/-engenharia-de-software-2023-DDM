@@ -6,7 +6,9 @@
  converter(Map<dynamic,dynamic> resultado) async {
 /*
 O parâmetro resultado traz os valores da cidade, que tem a Foreign Key do estado - o estado_id. 
-estado_id é um valor da coluna do BD do tipo int, >>>NÃO É O OBJETO ESTADO
+estado_id é a coluna do BD que possui um valor do tipo int, >>>NÃO É O OBJETO ESTADO. 
+Exemplo: Tabela Cidade que tem o registro da cidade Maringá retornaria 
+ {id: 1, nome: Maringá, estado_id: 1} >>> veja que estado_id é 1 referente ao estado do Paraná >>>NÃO É O OBJETO ESTADO. 
 */
 ```
 
