@@ -34,6 +34,3 @@ abstract class CidadeInterfaceDAO{
 ```
 [código completo](cidade_interface_dao.dart)
 
-## Código completo:
-- [DAO cidade](cidade_dao_sqlite.dart)<br>
-- [DAO contato](contato_dao_sqlite.dart)<br>
