@@ -18,6 +18,8 @@ Future<Cidade> converter...
 //o objeto cidade precisa ter o OBJETO estado e não a coluna do tipo int.
 ```
 Neste contexto, precisamos "converter" a Foreign Key que vem do BD para um Objeto Estado! Como???<br>
+
+## converter - CONVERSÃO
 (1) criamos um objeto estado;<br>
 (2) para preencher este objeto, usamos o método consultar por id do DAO do estado.<br>
 
