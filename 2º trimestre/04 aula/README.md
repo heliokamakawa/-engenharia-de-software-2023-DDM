@@ -83,7 +83,8 @@ Em converterContato do DAO, por falta de atenção, pode ter nome de colunas err
 Contato converterContato(Map<dynamic,dynamic> resultado){
     return Contato(
       id : resultado['id'],
-      nome: resultado['nomi'],            // >>>>está nomi ao invés de nome
+      // >>>>está nomi ao invés de nome - confira os nomes com o script do BD
+      nome: resultado['nomi'],           
       telefone: resultado['telefone'],
       email: resultado['email'],
       urlAvatar:  resultado['url_avatar']
