@@ -5,12 +5,17 @@
 - [DAO do contato - tem associação com cidade](contato_dao_sqlite.dart)<br>
 
 # Entendendo o código
-<p>É muito comum que, com o uso de framework, ele já faça tudo!!! O que é bom, pois você não tem trabalho, mas ao mesmo tempo é péssimo, pois geralemnte não entendemos o código/processo envolvido.</p>
-<p>Desenvolvendo tudo na mão como este projeto, sem framework de mapeamento OR, temos a oportunidade de entender passo a passo!</p>
+<p>Hoje em dia é muito comum utilizarmos framework de ORM (como Hibernate) - ele faz tudo! É maravilhoso! Porém, ao mesmo tempo é péssimo! Pois geralemnte não entendemos o código/processo envolvido.</p>
+<p>Desenvolvendo tudo na mão como estamos fazendo neste projeto (sem framework de mapeamento ORM), temos a oportunidade de entender passo a passo!</p>
 
 ## Qual a diferença entre DAO com ou sem associação?
-<p>DAO sem associção tem atributos que geralmente são idênticas tanto no projeto como no BD.</p>
-<p>Já no DAO com associação, precisamos entender que o projeto é Orientado a Objeto e o BD é relacional. Enquanto que a classe tem associação de um outro objeto (exemplo: Cidade tem o atributo do tipo objeto Estado), no BD, uma tabela associa por meio da Foreign Key - uma coluna do tipo int (exemplo: tabela Cidade tem a coluna do tipo int → estado_id). Desta forma, logicamente, como há diferença entre o projeto e o BD, precisamos entender e converter estes valores.</p>
+<p>DAO sem associação → tem atributos que geralmente são idênticas tanto no projeto como no BD - não muita dificuldade.</p>
+<p>DAO com associação → precisamos entender que o projeto é Orientado a Objeto e o BD é relacional.</p> 
+- Projeto de Software é ORIENTADO A OBJETO (exemplo: Cidade tem o atributo do tipo objeto Estado);
+- BD é RELACIONAL! Assim é uma tabela em que a associação é uma Foreign Key - uma coluna do tipo int (exemplo: tabela Cidade tem a coluna do tipo int → estado_id). 
+<p>Desta forma, logicamente, como há diferença entre o projeto e o BD, precisamos entender!</p>
+<p>A busca de dados (consulta) é realizada pelo projeto! No projeto precisamos de dados organizado em Objetos e não Relacional do BD.</p>
+<p>É por isso que precisamos definir o método CONVERTER.</p>
 
 ## Entenda o ponto principal
 O principal ponto a entender é a >>>ASSOCIAÇÃO<<< - entendendo isso ficará fácil e saberá como qualquer framework funciona!<br>
