@@ -1,18 +1,10 @@
 # Implementação DAO com associação (SQFLite)
 
-<p>Vou postar o "passo a passo" de um DAO associação - no caso Cidade.</p>
-<p>O projeto possui outros DAO's com associção. O código está disponível no projeto. Porém, como todos tem exatamente a mesma dinâmica, não faz sentido e assim, não postarei o "passo a passo" dos demais.</p>
-
-## VERIFIQUE AS Dependências/Bibliotecas → JÁ FIZEMOS 
-→ sqflite - biblioteca para trabalhar com sqlite;<br>
-→ path - pacote que fornece operações comuns para manipulação de caminhos: junção, divisão, normalização, etc (independente do SO).<br>
-```cmd
-flutter pub add sqflite
-flutter pub add path  
-```
+## Código completo:
+- [DAO cidade](cidade_dao_sqlite.dart)<br>
+- [DAO contato](contato_dao_sqlite.dart)<br>
 
 ## Criar um arquivo no projeto
-
 <p>Crie um arquivo no projeto. Padronize o nome e a organização! Não precisa ser da mesma forma que faço, mas é importante padronizar e organizar!</p>
 <p>Para organização, eu criei o arquivo chamado de "contato_dao_sqlite.dart" dentro de uma nova pasta "dao" da pasta "sqlite".
 projeto.</p>
@@ -228,7 +220,3 @@ Assim, precisamos definir uma lógica para tratar estes 2 casos...
       //o método "db.rawUpdate" solicita 2 parâmetros: (1) o SQL de alteração e (2) os parâmetros para substituir '?' do comando SQL.
       db.rawUpdate(sql,[cidade.nome, cidade.estado.id, cidade.id]);
 ```
-
-## Código completo:
-- [DAO cidade](cidade_dao_sqlite.dart)<br>
-- [DAO contato](contato_dao_sqlite.dart)<br>
