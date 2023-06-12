@@ -8,7 +8,7 @@
  converter(Map<dynamic,dynamic> resultado) async {
 ```
 <p>Atualmente as bibliotecas de BD retornam um tipo Map<dynamic, dynamic> em que, o primeiro dynamic é o nome da coluna e o segundo, o valor.</p> 
-<p>O resultado traz os valores da tabela cidade (no formato Map), que tem a Foreign Key do estado - o estado_id. Lembre-se que o "estado_id" é a coluna do BD que possui um valor do tipo int, >>>NÃO É O OBJETO ESTADO.</p> 
+<p>O resultado traz os valores da tabela cidade (no formato Map), que tem a Foreign Key do estado - o "estado_id". Lembre-se que o "estado_id" é a coluna do BD que possui um valor do tipo int, >>>NÃO É O OBJETO ESTADO.</p> 
 <p>Exemplo: O registro da cidade Maringá da tabela cidade retornaria: {id: 1, nome: Maringá, estado_id: 1} >>> veja que estado_id é 1 referente ao estado do Paraná >>>NÃO É O OBJETO ESTADO.</p> 
 
 ## converter - RETORNO
