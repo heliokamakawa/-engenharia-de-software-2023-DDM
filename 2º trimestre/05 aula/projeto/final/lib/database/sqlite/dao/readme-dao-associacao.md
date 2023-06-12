@@ -230,5 +230,5 @@ Assim, precisamos definir uma lógica para tratar estes 2 casos...
 ```
 
 ## Código completo:
-- [DAO com associação](cidade_dao_sqlite.dart)<br>
-- [DAO do contato](contato_dao_sqlite.dart)<br>
+- [DAO cidade](cidade_dao_sqlite.dart)<br>
+- [DAO contato](contato_dao_sqlite.dart)<br>
