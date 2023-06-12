@@ -1,37 +1,38 @@
 # Método converter
-<p>Precisamos criar o método para converter para organizar os dados Orientado a Objeto (no projeto) que vem do BD que é relacional (que é uma FK).</p>
-<p>Assim, o método deve RECEBER como PARÂMETRO o resultado que vem do BD. Atualmente as bibliotecas de BD retornam um tipo Map<dynamic, dynamic> em que, o primeiro dynamic é o nome da coluna e a segunda o valor da coluna.</p>
+<p>Precisamos criar o método converter para organizar os dados Orientado a Objeto (no projeto) que vem do BD que é relacional (que é uma FK).</p>
 
-## converter - Parâmetro
-<p>O parâmetro resultado traz os valores da cidade, que tem a Foreign Key do estado - o estado_id.</p>
-<p>O "estado_id" é a coluna do BD que possui um valor do tipo int, >>>NÃO É O OBJETO ESTADO.</p> 
-<p>Exemplo: Tabela Cidade que tem o registro da cidade Maringá retornaria</p> 
-<p> {id: 1, nome: Maringá, estado_id: 1} >>> veja que estado_id é 1 referente ao estado do Paraná >>>NÃO É O OBJETO ESTADO.</p> 
+## converter - PARÂMETRO
+<p>O método deve RECEBER como PARÂMETRO o resultado que vem do BD.</p>
+
 ```dart
  converter(Map<dynamic,dynamic> resultado) async {
 ```
+<p>Atualmente as bibliotecas de BD retornam um tipo Map<dynamic, dynamic> em que, o primeiro dynamic é o nome da coluna e a segundo, o valor da coluna.</p> 
+<p>O resultado traz os valores da cidade (no formato Map), que tem a Foreign Key do estado - o estado_id. Lembre-se que o "estado_id" é a coluna do BD que possui um valor do tipo int, >>>NÃO É O OBJETO ESTADO.</p> 
+<p>Exemplo: O registro da cidade Maringá da tabela cidade retornaria: {id: 1, nome: Maringá, estado_id: 1} >>> veja que estado_id é 1 referente ao estado do Paraná >>>NÃO É O OBJETO ESTADO.</p> 
 
-O método "converter" deve RETORNAR o OBJETO Cidade com o respectivo OBJETO Estado, pois o nosso projeto é Orientado a Objeto.<br>
+## converter - RETORNO
+O método deve RETORNAR o OBJETO Cidade com o respectivo OBJETO Estado, pois o nosso projeto é Orientado a Objeto.<br>
 ```dart
 Future<Cidade> converter...
 //o objeto cidade precisa ter o OBJETO estado e não a coluna do tipo int.
 ```
-Assim precisamos "converter" a Foreign Key que vem do banco para um Objeto Estado! Como???<br>
+Neste contexto, precisamos "converter" a Foreign Key que vem do BD para um Objeto Estado! Como???<br>
 (1) criamos um objeto estado;<br>
 (2) para preencher este objeto, usamos o método consultar por id do DAO do estado.<br>
+
 ```dart
     Estado estado = await EstadoDAOSQLite().consultar(resultado['estado_id']);
-    /*
-    Estado estado → definindo o objeto estado
-    = await → como o método é assíncrono, ordenamos "esperar" (await)
-    EstadoDAOSQLite().consultar →  consultar do dao estado
-    resultado['estado_id'] → o id do estado específico da cidade
-    o método consultar do DAO do estado irá:
+```
+- await → como o método é assíncrono, ordenamos "esperar" (await)
+- EstadoDAOSQLite().consultar →  consultar do dao estado
+- resultado['estado_id'] → o id do estado específico da cidade
+- o método consultar do DAO do estado irá:
     (1) irá buscar os dados estado conforme o id (estado_id) que passamos;
     (2) converter os dados para o objeto estado;
     (3) retornar o objeto estado preenchido!!!
-    */
-```
+   
+## converter - ASSSOCIAÇÃO
 Agora que temos o OBJETO estado e não a Foreign Key, inserimos/associamos a cidade que será retornada
 ```dart
     return Cidade(
@@ -40,7 +41,8 @@ Agora que temos o OBJETO estado e não a Foreign Key, inserimos/associamos a cid
       estado: estado   // associando o OBJETO estado a cidade
     );
 ```
-Código completo
+
+## converter - CÓDIGO COMPLETO
 ```dart
 Future<Cidade> converter(Map<dynamic,dynamic> resultado) async {
     
