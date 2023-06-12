@@ -1,4 +1,5 @@
 # Definindo script BD
+Altere o arquivo "script.dart", inserindo as tabelas e as inserções necessárias.<br>
 
 ## Criação das tabelas
 
