@@ -1,6 +1,7 @@
 # Método converter
 <p>Precisamos criar o método converter porque na associação, o BD possui uma FK, e no projeto é um Objeto.</p>
 O método RECEBE como PARÂMETRO o resultado que vem do BD → valores da tabela cidade e não objetos.<br>
+
 ```dart
  converter(Map<dynamic,dynamic> resultado) async {
 /*
