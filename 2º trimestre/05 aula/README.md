@@ -16,7 +16,7 @@
  
 ## AULA
 ### [Passo 01 - Definir Script BD](projeto/final/lib/database/sqlite/readme.md)
-### [Passo 02 - Definir Interface](projeto/final/lib/database/sqlite/dao/readme.md)
+### [Passo 02 - Definir Interface](projeto/final/lib/view/readme_interface_cidade_dao.md)
 ### [Passo 03 - Definir DAO](projeto/final/lib/database/sqlite/dao/readme.md)
 ### [Passo 04 - Alterar Lista](projeto/final/lib/view/readme.md)
 ### [Passo 05 - Alterar Formulário](projeto/final/lib/view/readme.md)
