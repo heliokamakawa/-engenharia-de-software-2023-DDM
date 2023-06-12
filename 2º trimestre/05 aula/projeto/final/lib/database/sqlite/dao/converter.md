@@ -2,14 +2,13 @@
 <p>Precisamos criar o método para converter para organizar os dados Orientado a Objeto (no projeto) que vem do BD que é relacional (que é uma FK).</p>
 <p>Assim, o método deve RECEBER como PARÂMETRO o resultado que vem do BD. Atualmente as bibliotecas de BD retornam um tipo Map<dynamic, dynamic> em que, o primeiro dynamic é o nome da coluna e a segunda o valor da coluna.</p>
 
+## Converter - Parâmetro
+<p>O parâmetro resultado traz os valores da cidade, que tem a Foreign Key do estado - o estado_id.</p>
+<p>estado_id é a coluna do BD que possui um valor do tipo int, >>>NÃO É O OBJETO ESTADO.</p> 
+<p>Exemplo: Tabela Cidade que tem o registro da cidade Maringá retornaria</p> 
+<p> {id: 1, nome: Maringá, estado_id: 1} >>> veja que estado_id é 1 referente ao estado do Paraná >>>NÃO É O OBJETO ESTADO.</p> 
 ```dart
  converter(Map<dynamic,dynamic> resultado) async {
-/*
-O parâmetro resultado traz os valores da cidade, que tem a Foreign Key do estado - o estado_id. 
-estado_id é a coluna do BD que possui um valor do tipo int, >>>NÃO É O OBJETO ESTADO. 
-Exemplo: Tabela Cidade que tem o registro da cidade Maringá retornaria 
- {id: 1, nome: Maringá, estado_id: 1} >>> veja que estado_id é 1 referente ao estado do Paraná >>>NÃO É O OBJETO ESTADO. 
-*/
 ```
 
 O método "converter" deve RETORNAR o OBJETO Cidade com o respectivo OBJETO Estado, pois o nosso projeto é Orientado a Objeto.<br>
