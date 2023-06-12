@@ -16,6 +16,7 @@ Aplicamos DIP com 2 objetivos:
 <p>Para quem está desenvolvendo as telas, não importa detalhes específicos de como estas operações devem ser realizadas, massss..... </p>
 <p>Precisa saber o FORMATO destes métodos para fazer a chamada e tratar o respectivo retorno da chamada.</p>
 Exemplo1: No desenvolvimento da "tela salvar cidade", pouco importa como vai ser, mas precisamos saber qual o formato: nome do método, o que deve ser passado no parâmetro e o que retorna<br>
+
 ```dart
 abstract class CidadeInterfaceDAO{
   // precisa receber os dados da cidade e retorna a cidade com o id gerado pelo BD
