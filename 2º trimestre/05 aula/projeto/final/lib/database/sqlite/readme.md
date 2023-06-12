@@ -45,11 +45,11 @@ const criarTabelas = ['''
     ,FOREIGN KEY (contato_id) REFERENCES contato (id)
   )
 ''',
+];
 ```
 
 ## Definindo Inserções
 ```dart
-];
 //array de inserções
 const insercoes = [
 '''
