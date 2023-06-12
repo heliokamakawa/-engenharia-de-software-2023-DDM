@@ -76,104 +76,87 @@ class CidadeDAOSQLite implements CidadeInterfaceDAO{
 ```
 ### Implementação consultarTodos
 - Antes de mais nada, precisamos entender que na consulta, os dados retornados pelo SQFLite tem o formato de "map<dynamic,dynamic>".<br>
-- O primeiro dynamic refere-se ao nome da coluna e o segundo o valor. <br>
->Exemplo: 
->Se tiver a tabela estado no BD, onde há uma coluna nome, com o registro PARANÁ, <br>
->na consulta, será retornado um map: {nome: 'PARANÁ'}<br>
-- Assim, para facilitar as coisas, vamos criar o método de conversão que recebe este "map" e retorne a nossa classe "Contato".<br>
-```dart
-  Contato converterContato(Map<dynamic,dynamic> resultado){
-    return Contato(
-      id : resultado['id'],
-      nome: resultado['nome'],
-      telefone: resultado['telefone'],
-      email: resultado['email'],
-      urlAvatar:  resultado['url_avatar']
-    );
-  }
-```
+- O primeiro dynamic refere-se ao nome da coluna e o segundo o respectivo valor. <br>
+- Implementar o método [converter](readme-converter.md).<br>
 Agora sim, implementamos o "consultarTodos".
 ```dart
   @override
   Future<List<Contato>> consultarTodos() async {
     Database db = await  Conexao.criar(); 
-    List<Contato> lista = (await db.query('contato')).map<Contato>(converterContato).toList();
+    List<Map<dynamic,dynamic>> resultadoBD = await db.query('cidade');
+    List<Cidade> lista = [];
+    for(var registro in resultadoBD){
+      var cidade = await converter(registro);
+      lista.add(cidade);
+    }
     return lista;
   }
 ```
-#### IMPORTANTE SABER!!! - Implementação consultarTodos  
+### IMPORTANTE SABER!!! - Implementação consultarTodos  
 ```dart
 Database db = await  Conexao.criar(); 
-/*
-Aqui estamos pegando referência de Database - da nossa classe de Conexao. 
-Lembre-se que, na 1º vez, database é criado e partir da 2º, o que foi criado na 1º vez, será reutilizado.
-*/
 ```
+<p>Aqui estamos pegando referência de Database - da nossa classe de Conexao.</p> 
+<p>Lembre-se que, na 1º vez, database é criado e partir da 2º, o que foi criado na 1º vez, será reutilizado.</p>
 
 ```dart
-db.query('contato')) 
-// método do SQFLite para fazer a consulta de todos os contatos
+db.query('cidade')) 
 ```
+<p>Método do SQFLite para fazer a consulta de todos os contatos.</p>
+
 ```dart
-.map<Contato>(converterContato).toList(); 
-/*
-o map é um método da biblioteca do dart que percorre uma lista, executa a função (que recebe como parâmetro) e retorna uma NOVA lista.<br>
-no nosso caso, estamos: <br>
-(1) percorrendo a lista do tipo map que veio da consulta no BD; <br>
-(2) chamando o nosso método "converterContato" para converter map (de cada registro do resultado) para a nossa classe contato; <br>
-(3) retornar uma nova lista do tipo contato.
-E por fim, o map, de fato, retorna o tipo Iterable, e assim, precisamos chamar o método toList para convertê-lo em uma lista.
-<br>
-*/
+    List<Cidade> lista = [];
+    for(var registro in resultadoBD){
+      var cidade = await converter(registro);
+      lista.add(cidade);
+    }
+    return lista;
 ```
-### Implementação consultar
+(1) definindo lista; <br>
+(2) percorrendo o resultadoBD do tipo map que veio da consulta no BD; <br>
+(3) chamando o nosso método "converter" para converter map (de cada registro do resultado) para o objeto (classe Cidade); <br>
+(4) retornar a lista do tipo cidade.<br>
+
+## Implementação consultar
 
 ```dart
   @override
-  Future<Contato> consultar(int id) async {
+  Future<Cidade> consultar(int id) async {
     Database db = await  Conexao.criar();
-    List<Map> maps = await db.query('Contato',where: 'id = ?',whereArgs: [id]);
-    if (maps.isEmpty) throw Exception('Não foi encontrado registro com este id');
-    Map<dynamic,dynamic> resultado = maps.first;
-    return converterContato(resultado);
+    Map resultado = (await db.query('cidade',where: 'id = ?',whereArgs: [id])).first;
+    if (resultado.isEmpty) throw Exception('Não foi encontrado registro com este id');
+    return converter(resultado);
   }
 ```
-#### IMPORTANTE SABER!!! - Implementação consultar
+### IMPORTANTE SABER!!! - Implementação consultar
 
 ```dart
-await db.query('Contato',where: 'id = ?',whereArgs: [id]);
-/*
-Para consultar um contato específico, passamos como parâmetro o nome e o valor do filtro de consulta. 
-No caso, estamos informando que o nome da coluna é id, e o valor é id que vem do parâmetro.
-*/
+await db.query('Cidade',where: 'id = ?',whereArgs: [id]);
 ```
+<p>Para consultar uma cidade específica, passamos como parâmetro o nome e o valor do filtro de consulta. </p>
+<p>No caso, estamos informando que o nome da coluna é id, e o valor é id que vem do parâmetro.</p>
 
 ```dart
 if (maps.isEmpty) throw Exception('Não foi encontrado registro com este id');
-/*
-Aqui estamos tratando no caso em que não for encontrato registro do id passado no parâmetro.
-*/
 ```
+<p>Aqui estamos tratando no caso em que não for encontrato registro do id passado no parâmetro.</p>
 
 ```dart
- Map<dynamic,dynamic> resultado = maps.first;
-/*
-Armazenando resultado...
-*/
+ Map resultado = (await db.query('cidade',where: 'id = ?',whereArgs: [id])).first;
 ```
+Armazenando resultado que está vindo BD na nossa variável "resultado". Utilizamos "first" para indicar que queremos somente o primeiro resultado.
 
 ```dart
-return converterContato(resultado);
-/*
-Convertendo com o nosso método e retornando o contato.
-*/
+return converter(resultado);
 ```
-### Implementação excluir
+<p>Convertendo com o nosso método e retornando o contato.</p>
+
+## Implementação excluir
 ```dart
   @override
   Future<bool> excluir(id) async {
     Database db = await  Conexao.criar();
-    var sql ='DELETE FROM contato WHERE id = ?';
+    var sql ='DELETE FROM cidade WHERE id = ?';
     int linhasAfetas = await db.rawDelete(sql, [id]);
     return linhasAfetas > 0;
   }
@@ -182,41 +165,38 @@ Convertendo com o nosso método e retornando o contato.
 ```dart
 int linhasAfetas = await db.rawDelete(sql, [id]);
 return linhasAfetas > 0;
-/*
-db.rawDelete tente executar o comando e retorno a quantidade de linhas afetadas no BD.<br>
+```
+O "db.rawDelete" tenta executar o comando e retorna a quantidade de linhas afetadas no BD.<br>
 Assim, pegamos a referências de linhas afetadas (int linhasAfetas = ...).<br>
 E retornarmos se deu certo (return linhasAfetas > 0) - se linhasAfetadas for maior que 0, significa que a exclusão foi realizada.
-*/
-```
+
 ### Implementação salvar
 
 ```dart
-
   @override
   Future<Contato> salvar(Contato contato) async {
     Database db = await  Conexao.criar();
     String sql;
-    if(contato.id == null){
-      sql = 'INSERT INTO contato (nome, telefone,email,url_avatar) VALUES (?,?,?,?)';
-      int id = await db.rawInsert(sql,[contato.nome,contato.telefone,contato.email,contato.urlAvatar]);
-      contato = Contato(
+    if(cidade.id == null){
+      sql = 'INSERT INTO cidade (nome, estado_id) VALUES (?,?)';
+      int id = await db.rawInsert(sql,[cidade.nome,cidade.estado.id]);
+      cidade = Cidade(
         id: id,
-        nome: contato.nome, 
-        telefone: contato.telefone, 
-        email: contato.email, 
-        urlAvatar: contato.urlAvatar);
+        nome: cidade.nome, 
+        estado: cidade.estado);
     }else{
-      sql = 'UPDATE contato SET nome = ?, telefone =?, email = ?, url_avatar= ? WHERE id = ?';
-      db.rawUpdate(sql,[contato.nome, contato.telefone, contato.email, contato.urlAvatar, contato.id]);
+      sql = 'UPDATE cidade SET nome = ?, estado_id =? WHERE id = ?';
+      db.rawUpdate(sql,[cidade.nome, cidade.estado.id, cidade.id]);
     }
-    return contato;
+    return cidade;
   }
 ```
+
 #### IMPORTANTE SABER!!! - Implementação salvar
 O método salvar é utilizado em 2 situações: (1) alteração de um contato existente e (2) inserção de um novo contato. <br>
 Assim, precisamos definir uma lógica para tratar estes 2 casos...
 ```dart
-    if(contato.id == null){  //se id é nulo, então é um novo registro
+    if(cidade.id == null){  //se id é nulo, então é um novo registro
       [...]                   //desta forma, aqui definimos comandos para salvar um novo contato
     }else{                  //caso contrário, se tiver id, significa que é alteração
       [...]                   //desta forma, aqui definimos comandos para alterar um contato
@@ -227,31 +207,27 @@ Assim, precisamos definir uma lógica para tratar estes 2 casos...
   ```dart
   // comando para salvar um novo contato no BD.
       // definindo SQL.
-      sql = 'INSERT INTO contato (nome, telefone,email,url_avatar) VALUES (?,?,?,?)';
+      sql = INSERT INTO cidade (nome, estado_id) VALUES (?,?)';
       // comando para salvar no SQLite (db.rawInsert). 
       // db.rawInsert tenta salvar e se der certo, retorna o id gerado automaticamente
-      int id = await db.rawInsert(sql,[contato.nome,contato.telefone,contato.email,contato.urlAvatar]);
+      int id =  await db.rawInsert(sql,[cidade.nome,cidade.estado.id]);
       /*
-      definimos a classe de Contato do tipo final - os valroes não podem ser alterados depois de definidos,
-      assim, para retornar o contato com id, precisamos criar um novo contato e inserir o id.
+      definimos a classe Cidade do tipo final - os valroes não podem ser alterados depois de definidos,
+      assim, para retornar a cidade com id, precisamos criar uma nova cidade e inserir o id.
       */
-      contato = Contato(
+      cidade = Cidade(
         id: id,
-        nome: contato.nome, 
-        telefone: contato.telefone, 
-        email: contato.email, 
-        urlAvatar: contato.urlAvatar);
+        nome: cidade.nome, 
+        estado: cidade.estado);
 ```
 ```dart
     //comando para alterar
       //sql para alterar de forma mais segura, no qual, preparamos os parâmetros (?) para serem inseridos - PreparedStatement
-      sql = 'UPDATE contato SET nome = ?, telefone =?, email = ?, url_avatar= ? WHERE id = ?';
+      sql = 'UPDATE cidade SET nome = ?, estado_id =? WHERE id = ?';
       //chamando o método "db.rawUpdate" da biblioteca sqflite para alterar 
       //o método "db.rawUpdate" solicita 2 parâmetros: (1) o SQL de alteração e (2) os parâmetros para substituir '?' do comando SQL.
-      db.rawUpdate(sql,[contato.nome, contato.telefone, contato.email, contato.urlAvatar, contato.id]);
+      db.rawUpdate(sql,[cidade.nome, cidade.estado.id, cidade.id]);
 ```
-
-
 
 ## Código completo:
 - [DAO com associação](cidade_dao_sqlite.dart)<br>
