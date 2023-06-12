@@ -23,5 +23,4 @@ Então preste atenção neste ponto e vamos aos detalhes do código!!!<br>
 
 # DAO com associação:
 - [método converter](readme-converter.md)<br>
-- [DAO do cidade](cidade_dao_sqlite.dart)<br>
-- [DAO do contato](contato_dao_sqlite.dart)<br>
+- [DAO com associação](readme-dao-associacao.md)<br>
