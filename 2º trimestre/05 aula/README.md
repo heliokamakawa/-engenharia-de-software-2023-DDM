@@ -1,7 +1,4 @@
 # Tema: CRUD com associação
-<p>Vou postar o "passo a passo" de um DAO associação - no caso Cidade.</p>
-<p>O projeto possui outros DAO's com associção. O código está disponível no projeto. Porém, como todos tem exatamente a mesma dinâmica, não faz sentido e assim, não postarei o "passo a passo" dos demais.</p>
-
 ## MATERIAL DE ESTUDO
 - SQLite Foreign Key Support - https://www.sqlite.org/foreignkeys.html
 - Flutter (oficial) - DropdownButton<T> class - https://api.flutter.dev/flutter/material/DropdownButton-class.html?gclid=Cj0KCQjwj_ajBhCqARIsAA37s0zcNoOwCky2JtM7EJOdtDS41woKL_1SANSFTn0r_K9SUhutc5rAdpIaAhpeEALw_wcB&gclsrc=aw.ds
@@ -16,6 +13,15 @@
 - 2 CRUD COM ASSOCIAÇÃO 
   
 ## AULA CRUD com associação
+<p>Vou postar o "passo a passo" de um DAO associação - no caso Cidade.</p>
+<p>O projeto possui outros DAO's com associção. O código está disponível no projeto. Porém, como todos tem exatamente a mesma dinâmica, não faz sentido e assim, não postarei o "passo a passo" dos demais.</p>
+### VERIFIQUE AS Dependências/Bibliotecas → JÁ FIZEMOS 
+→ sqflite - biblioteca para trabalhar com sqlite;<br>
+→ path - pacote que fornece operações comuns para manipulação de caminhos: junção, divisão, normalização, etc (independente do SO).<br>
+```cmd
+flutter pub add sqflite
+flutter pub add path  
+```
 ### [Passo 01 - Definir Script BD](projeto/final/lib/database/sqlite/readme.md)
 ### [Passo 02 - Definir Interface](projeto/final/lib/view/interface/readme_interface_cidade_dao.md)
 ### [Passo 03 - Definir DAO](projeto/final/lib/database/sqlite/dao/readme.md)
