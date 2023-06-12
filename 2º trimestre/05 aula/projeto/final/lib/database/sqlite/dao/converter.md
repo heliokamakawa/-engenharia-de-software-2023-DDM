@@ -1,6 +1,6 @@
 # Método converter
-Entenda o PONTO CRÍTICO, no caso, a >>>ASSOCIAÇÃO<<< - entendendo isso ficará fácil e saberá como qualquer framework funciona!<br>
-O método converter RECEBE como PARÂMETRO o resultado que vem do BD → valores da tabela cidade e não objetos.<br>
+<p>Precisamos criar o método converter porque na associação, o BD possui uma FK, e no projeto é um Objeto.</p>
+O método RECEBE como PARÂMETRO o resultado que vem do BD → valores da tabela cidade e não objetos.<br>
 ```dart
  converter(Map<dynamic,dynamic> resultado) async {
 /*
@@ -9,7 +9,7 @@ estado_id é um valor da coluna do BD do tipo int, >>>NÃO É O OBJETO ESTADO
 */
 ```
 
-O método converter RETORNA o OBJETO Cidade, pois o nosso projeto é Orientado a Objeto.<br>
+O método RETORNA o OBJETO Cidade com o respectivo OBJETO Estado, pois o nosso projeto é Orientado a Objeto.<br>
 ```dart
 Future<Cidade> converter...
 //o objeto cidade precisa ter o OBJETO estado e não a coluna do tipo int.
