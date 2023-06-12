@@ -18,7 +18,8 @@
 ### VERIFIQUE AS Dependências/Bibliotecas → JÁ FIZEMOS 
 → sqflite - biblioteca para trabalhar com sqlite;<br>
 → path - pacote que fornece operações comuns para manipulação de caminhos: junção, divisão, normalização, etc (independente do SO).<br>
-```cmd
+
+ ```cmd
 flutter pub add sqflite
 flutter pub add path  
 ```
