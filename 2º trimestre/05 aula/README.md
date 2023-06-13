@@ -3,6 +3,7 @@
 - SQLite Foreign Key Support - https://www.sqlite.org/foreignkeys.html
 - Flutter (oficial) - DropdownButton<T> class - https://api.flutter.dev/flutter/material/DropdownButton-class.html?gclid=Cj0KCQjwj_ajBhCqARIsAA37s0zcNoOwCky2JtM7EJOdtDS41woKL_1SANSFTn0r_K9SUhutc5rAdpIaAhpeEALw_wcB&gclsrc=aw.ds
 - Flutter (oficial) - DropdownMenuItem - https://api.flutter.dev/flutter/material/DropdownMenuItem-class.html
+- Equals - https://dart-lang.github.io/linter/lints/hash_and_equals.html
   
 ## Diário de Aula
 2 CRUD BÁSICO FUNCIONANDO; <br>
