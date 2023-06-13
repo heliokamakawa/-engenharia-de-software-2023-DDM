@@ -7,4 +7,6 @@ class Estado{
     required this.nome,
     required this.sigla
   });
+
+  bool operator ==(o) => o is Estado && o.nome == nome && o.id == id;
 }
